@@ -18,5 +18,8 @@ mvn clean install
 mvn spring-boot:run
 ```
 
+## ER Diagram
+![dbmodel-1]()
+
 
 ## API Design
