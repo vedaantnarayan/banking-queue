@@ -19,7 +19,7 @@ mvn spring-boot:run
 ```
 
 ## ER Diagram
-![dbmodel-1]()
+![ER-Diagram](https://user-images.githubusercontent.com/46216991/54922853-0bb55080-4f2f-11e9-97ff-3624f4fc9747.png)
 
 
 ## API Design
