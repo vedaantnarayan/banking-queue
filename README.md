@@ -17,7 +17,11 @@ mvn clean install
 ```
 mvn spring-boot:run
 ```
+## Swagger URL
+```
+http://localhost:8080/swagger-ui.html
 
+```
 ## ER Diagram
 ![ER-Diagram](https://user-images.githubusercontent.com/46216991/54922853-0bb55080-4f2f-11e9-97ff-3624f4fc9747.png)
 
