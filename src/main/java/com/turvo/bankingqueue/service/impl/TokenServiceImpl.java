@@ -68,7 +68,7 @@ public class TokenServiceImpl implements TokenService {
             counterService.assignTokenToCounter(createdToken,tokenRequest);
             
         } catch(Exception e) {
-            throw new TokenException("Unable to create or assign Token"+e.getMessage(), e);
+            throw new TokenException("Unable to create or assign Token "+e.getMessage(), e);
         }
         return new TokenResponse(tokenRequest);
     }

@@ -4,15 +4,14 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
-import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-@ControllerAdvice
+@RestControllerAdvice
 public class GlobalExceptionHandler {
 	
 	@ExceptionHandler(HttpMessageNotReadableException.class)
-	public @ResponseBody ExceptionJSONInfo handleIllegalArguementException
+	public ExceptionJSONInfo handleIllegalArguementException
 		(HttpServletRequest request, Exception ex){		
 		return response(request, ex,HttpStatus.BAD_REQUEST.value());
 	}
@@ -26,7 +25,7 @@ public class GlobalExceptionHandler {
 	}
 	
 	@ExceptionHandler
-	public @ResponseBody ExceptionJSONInfo handleTokenGenerationException
+	public ExceptionJSONInfo handleTokenGenerationException
 		(HttpServletRequest request, Exception ex){		
 		return response(request, ex,HttpStatus.INTERNAL_SERVER_ERROR.value());
 	}
