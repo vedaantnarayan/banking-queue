@@ -23,3 +23,44 @@ mvn spring-boot:run
 
 
 ## API Design
+
+**/api**
+
+1. **/token (Method: POST)**
+
+- To create token for each customer as per his account type(priority/regular). 
+- If customer is new user then customer details will be persisted first and generates token.
+- If customer is existing user then token will be generated.
+- If customer opts for multiple services then once one service gets completed token will be reassigned to another counter to serve next services.
+
+Request Body:
+
+`{
+    "servicePriority":"REGULAR",
+    "tokenType":"ACCOUNT_OPEN",
+    "branchName":"midtown",
+    "customer":{
+                "name":"Vedant",
+                "phoneNumber":"5466788889",
+                "address":{
+                  "streeName":"streeName",
+                  "city":"Hyderabad",
+                  "state":"Telengana",
+                  "country":"India",
+                  "zipCode":"5600087"
+          }
+    }
+} `
+
+2. **/token/{tokenId}**
+   -- fetch token details by token id.
+   
+3. **/counter/status**
+   -- Lists down all counters and respective tokens assigned.
+   
+4. **/{branchName}/counter/status**
+   -- Lists down all counters of that branch and respective tokens assigned to counters.
+   
+
+
+
