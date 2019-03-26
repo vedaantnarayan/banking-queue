@@ -22,6 +22,9 @@ mvn spring-boot:run
 ![ER-Diagram](https://user-images.githubusercontent.com/46216991/54922853-0bb55080-4f2f-11e9-97ff-3624f4fc9747.png)
 
 
+## Class Diagram
+![Class-Diagram](https://user-images.githubusercontent.com/46216991/54974577-85465080-4fba-11e9-89b5-c710bfde3016.png)
+
 ## API Design
 
 
@@ -61,5 +64,9 @@ Request Body:
    -- Lists down all counters of that branch and respective tokens assigned to counters.
    
 
+# Assumptions
+- For new customer, customer details will be saved into database and then token will be issued and assigned to counter.
+- For Existing Customer token will be generated and assigned to counter to operate based on services opted and type of account.
+- At any given point of time tokens will be queued up at counters based on counter ranking (no of tokens assigned to counter).
 
 
