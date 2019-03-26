@@ -41,7 +41,8 @@ http://localhost:8080/swagger-ui.html
 
 Request Body:
 
-`{
+```
+{
     "servicePriority":"REGULAR",
     "tokenType":"ACCOUNT_OPEN",
     "branchName":"midtown",
@@ -56,7 +57,8 @@ Request Body:
                   "zipCode":"5600087"
           }
     }
-} `
+}
+```
 
 2. **/token/{tokenId}**
    -- fetch token details by token id.
