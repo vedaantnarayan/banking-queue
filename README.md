@@ -24,7 +24,6 @@ mvn spring-boot:run
 
 ## API Design
 
-**/api**
 
 1. **/token (Method: POST)**
 
